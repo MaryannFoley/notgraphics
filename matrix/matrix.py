@@ -36,7 +36,12 @@ def matrix_mult( m1, m2 ):
         for col in range(len(m2)):
             tempL=[]
             for val in m2[col]:
-                
+               sum=0
+               for val2 in m1[i]:
+                   sum+=val*val2
+                tempL.append(sum)
+            for x in range(4):
+                m2[col][x]=tempL[x]
 
 
 
