@@ -11,7 +11,7 @@ def draw_line( x0, y0, x1, y1, screen, color ):
         else:
             yinc=1
             octant=1
-    elif y1<y0: #pointing downwards
+    elif x1<x0: #pointing downwards
         yinc=-1
         if (y1-y0)/(x1-x0) > -1:
             #octant 7
