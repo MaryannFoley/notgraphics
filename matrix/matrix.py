@@ -15,7 +15,7 @@ def print_matrix( matrix ):
     for i in range(4):
         strLine=""
         for list in matrix:
-            strLine+=str(list[i])+" "
+            strLine+=str(list[i])+"\t"
         print(strLine)
 
 #turn the paramter matrix into an identity matrix
@@ -27,7 +27,7 @@ def ident( matrix ):
                 matrix[i][x]=1
             else:
                 matrix[i][x]=0
-            
+
 
 #multiply m1 by m2, modifying m2 to be the product
 #m1 * m2 -> m2
@@ -39,7 +39,8 @@ def matrix_mult( m1, m2 ):
                sum=0
                for val2 in m1[i]:
                    sum+=val*val2
-                tempL.append(sum)
+               print(sum)
+               tempL.append(sum)
             for x in range(4):
                 m2[col][x]=tempL[x]
 
